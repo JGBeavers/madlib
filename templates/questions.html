@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Madlib Questions</title>
-  </head>
-  <body>
-    <form action="/story">
-      {% for prompt in prompts %}
-      <p>
-        {{prompt}}:
-        <input type="text" name="{{prompt}}" />
-      </p>
-      {% endfor %}
-      <button>Submit</button>
-    </form>
-  </body>
-</html>
+{% extends 'base.html' %} {% block title%}Madlib Questions{% endblock %} {%
+block content %}
+<form action="/story">
+  {% for prompt in prompts %}
+  <p>
+    {{prompt}}:
+    <input type="text" name="{{prompt}}" />
+  </p>
+  {% endfor %}
+  <button>Submit</button>
+</form>
+{% endblock %}
